@@ -3,6 +3,7 @@ import { useState } from 'react';
 import CourseGoalList from './components/CourseGoalList.tsx';
 import Header from './components/Header.tsx';
 import goalsImg from './assets/goals.jpg';
+import NewGoal from './components/NewGoal.tsx';
 
 // Custom type for a course goal
 export type CourseGoal = {
@@ -43,8 +44,8 @@ export default function App() {
         <h1>Your Course Goals</h1>
         {/* <p>Track your Learning Progress Below</p> */}
       </Header>
-      <button onClick={handleAddGoal}>Add Goal</button>
-
+      {/* <button onClick={handleAddGoal}>Add Goal</button> */}
+      <NewGoal/>
       {/* Render the list of goals */}
       <CourseGoalList goals={goals} onDeleteGoal={handleDeleteGoal} />
 
