@@ -31,6 +31,11 @@ export default function App() {
 
     console.log("Goal added!");
   }
+
+  function handleDeleteGoal(id: number){
+    // Keep all goals except the one with the matching id
+    setGoals(prevGoals => prevGoals.filter((goal) => goal.id !== id));
+  }
   
   return (
     <main>
