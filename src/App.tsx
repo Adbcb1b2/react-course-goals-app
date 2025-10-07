@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import CourseGoal from './components/CourseGoal.tsx';
+// import CourseGoal from './components/CourseGoal.tsx';
+import CourseGoalList from './components/CourseGoalList.tsx';
 import Header from './components/Header.tsx';
 import goalsImg from './assets/goals.jpg';
 
@@ -40,15 +41,7 @@ export default function App() {
       <button onClick={handleAddGoal}>Add Goal</button>
 
       {/* Render the list of goals */}
-      <ul>
-        {goals.map((goal) => (
-          <li key={goal.id}>
-            <CourseGoal title={goal.title}>
-              <p>{goal.description}</p>
-            </CourseGoal>
-          </li>
-        ))}
-      </ul>
+      <CourseGoalList goals={goals} />
 
 
     </main>
