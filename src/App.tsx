@@ -36,7 +36,7 @@ export default function App() {
     // Keep all goals except the one with the matching id
     setGoals(prevGoals => prevGoals.filter((goal) => goal.id !== id));
   }
-  
+
   return (
     <main>
       <Header image={{src: goalsImg, alt: 'A list of goals'}}>
@@ -46,7 +46,7 @@ export default function App() {
       <button onClick={handleAddGoal}>Add Goal</button>
 
       {/* Render the list of goals */}
-      <CourseGoalList goals={goals} />
+      <CourseGoalList goals={goals} onDeleteGoal={handleDeleteGoal} />
 
 
     </main>
