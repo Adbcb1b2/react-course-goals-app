@@ -17,14 +17,14 @@ export default function App() {
    // initial state is an empty array of CourseGoal objects, will get added to when the add button is clicked
   const [goals, setGoals] = useState<CourseGoal[]>([]);
 
-  function handleAddGoal() {
+  function handleAddGoal(goal: string, summary: string){ 
     // prevGoals is the previous state of goals
     setGoals(prevGoals => {
       // Define a new goal
       const newGoal: CourseGoal = {
         id: Math.random(), 
-        title: 'Learn React + TS',
-        description: 'Learn it in depth'
+        title: goal,
+        description: summary
       }
       // Return a new array with the new goal added
       return [...prevGoals, newGoal]
@@ -45,7 +45,7 @@ export default function App() {
         {/* <p>Track your Learning Progress Below</p> */}
       </Header>
       {/* <button onClick={handleAddGoal}>Add Goal</button> */}
-      <NewGoal/>
+      <NewGoal onAddGoal={handleAddGoal}/>
       {/* Render the list of goals */}
       <CourseGoalList goals={goals} onDeleteGoal={handleDeleteGoal} />
 
