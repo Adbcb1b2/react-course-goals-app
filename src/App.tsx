@@ -5,7 +5,7 @@ import Header from './components/Header.tsx';
 import goalsImg from './assets/goals.jpg';
 
 // Custom type for a course goal
-type CourseGoal = {
+export type CourseGoal = {
   title: string;
   description: string;
   id: number;
