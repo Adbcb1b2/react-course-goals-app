@@ -35,6 +35,7 @@ export default function App() {
     <main>
       <Header image={{src: goalsImg, alt: 'A list of goals'}}>
         <h1>Your Course Goals</h1>
+        {/* <p>Track your Learning Progress Below</p> */}
       </Header>
       <button onClick={handleAddGoal}>Add Goal</button>
 
